@@ -61,6 +61,8 @@ string convert(ll x){
         }
         return convert(tenth) + " Billion " + convert(unit);
     }
+    
+    return "";
 } 
 
 int main() {
