@@ -30,7 +30,7 @@ string convert(ll x){
         auto unit = x%100;
         auto tenth = x/100;
         if(x%100==0){
-            return ones[tenth] + " Hundred ";
+            return ones[tenth] + " Hundred";
         }
         return ones[tenth] + " Hundred " + convert(unit);
     }
@@ -39,21 +39,21 @@ string convert(ll x){
         auto unit = x%1000;
         auto tenth = x/1000;
         if(x%1000==0){
-            return ones[tenth]+" Thousand ";
+            return convert(tenth)+" Thousand";
         }
-        return ones[tenth] + " Thousand " + convert(unit);
+        return convert(tenth) + " Thousand " + convert(unit);
     }
     //7-9 digit name
-    if(x>=1000000 && x<=1000000000){
+    if(x>=1000000 && x<=999999999){
         auto unit = x%1000000;
         auto tenth = x/1000000;
         if(x%1000000==0){
-            return ones[tenth] + " Million "; 
+            return convert(tenth)+" Million"; 
         }
-        return ones[tenth] + " Million " + convert(x); 
+        return convert(tenth) + " Million " + convert(unit); 
     }
-
-}
+    if()
+} 
 
 int main() {
     int t;
