@@ -28,13 +28,14 @@ int main(){
     int t;
     cin >> t;
     for(int a0 = 0; a0 < t; a0++){
-        long n;
+        long long n;
         cin >> n;
 
         for(long long i = 2; i*i <= n; i++){
             while(n%i == 0 && n!=i){
                 n = n / i;
-            }    
+            }
+            
         }
         cout<<n<<endl;
     }

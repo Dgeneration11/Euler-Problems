@@ -46,7 +46,6 @@ int main(){
             if (palindrome >= n){
                 continue;
             }
-            
             //check divisible 
             for(int j=100; j <=999; j++){
                 if(palindrome % j==0){
@@ -56,7 +55,6 @@ int main(){
                         flag =1;
                         break;
                     }
-
                 }           
             }
         }
