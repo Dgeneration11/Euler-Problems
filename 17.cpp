@@ -52,7 +52,15 @@ string convert(ll x){
         }
         return convert(tenth) + " Million " + convert(unit); 
     }
-    if()
+    //10-12 digit name
+    if(x>=1000000000 && x<=999999999999ULL){
+        auto unit = x%1000000000;
+        auto tenth = x/1000000000;
+        if(x%1000000000==0){
+            return convert(tenth)+" Billion";
+        }
+        return convert(tenth) + " Billion " + convert(unit);
+    }
 } 
 
 int main() {
