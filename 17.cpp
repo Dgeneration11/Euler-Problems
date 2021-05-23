@@ -17,8 +17,8 @@ string convert(ll x){
     }
     //2-digt names
     if(x>=20 && x<=99){
-        auto unit = x%10;
-        auto tenth = x/10;
+        auto unit = x%10;   //unit = 56%10 = 6
+        auto tenth = x/10;  //tenth = 56/10 = 5
 
         if(x%10==0){
             return tens[tenth];
@@ -60,6 +60,14 @@ string convert(ll x){
             return convert(tenth)+" Billion";
         }
         return convert(tenth) + " Billion " + convert(unit);
+    }
+    if(x>=1000000000000 && x<999999999999999ULL){
+        auto unit = x%1000000000000;
+        auto tenth = x/1000000000000;
+        if(x%1000000000000==0){
+            return convert(tenth)+" Trillion";
+        }
+        return convert(tenth) + " Trillion " + convert(unit);
     }
     
     return "";
