@@ -11,13 +11,14 @@ int main() {
     cin>>t;
 
     while(t--){
-        unsigned int n;
+        unsigned int n=15;
         cin>>n;
 
         vector<unsigned int> last(1);
         cin>>last[0];
-        for(unsigned int i=1; i<=n;i++){
-            unsigned int nx;
+
+        for(unsigned int row=1; row<n;row++){
+            unsigned int nx = row + 1;
             vector<unsigned int> current;
             for(unsigned int col =0; col<nx; col++){
                 unsigned int x;
