@@ -7,11 +7,12 @@ using namespace std;
 
 
 int main() {
-    unsigned int t;
-    cin>>t;
+    unsigned int t=1;
+    unsigned int n=100;
+    //cin>>t;
 
     while(t--){
-        unsigned int n=15;
+        
         cin>>n;
 
         vector<unsigned int> last(1);
