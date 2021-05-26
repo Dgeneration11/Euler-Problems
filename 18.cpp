@@ -42,7 +42,7 @@ int main() {
 
             last = current;
         }
-        cout<<max_element(last.begin(), last.end())<<endl;
+        cout<<*max_element(last.begin(), last.end())<<endl;
     }
     return 0;
 }
